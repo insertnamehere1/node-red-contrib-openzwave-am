@@ -19,7 +19,7 @@ So, first make sure you have the OpenZWave library installed on your system, [as
 
 ```sh
 $ cd ~/.node-red
-$ npm install node-red-contrib-openzwave
+$ npm install node-red-contrib-openzwave-am
 ```
 
 #### Persisting ZWave configuration in zwcfg_xxx.xml files
@@ -40,7 +40,7 @@ Initialising OpenZWave 1.4.79 binary addon for Node.JS.
         User settings path : /home/pi/.node-red
 ```
 
-In the example above, the [node-red-contrib-openzwave](https://github.com/OpenZWave/node-red-contrib-openzwave) plugin           
+In the example above, the [node-red-contrib-openzwave-am](https://github.com/appmodule/node-red-contrib-openzwave-am) plugin           
 is initialising the UserPath to be the user settings directory for NodeRed.
 
 ```js
