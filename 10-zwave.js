@@ -27,12 +27,10 @@ var ozwsharedpath = path.dirname(path.dirname(require.resolve('openzwave-shared'
 var ozwsharedpackage = JSON.parse(fs.readFileSync(ozwsharedpath + '/package.json'))
 var thispackage = JSON.parse(fs.readFileSync(path.join(__dirname, '/package.json')))
 
-require('getmac').getMac(function (err, macAddress) {
-  if (err) throw err
-  UUIDPREFIX = macAddress.replace(/:/gi, '')
-})
+const getMac = require('getmac').default
+UUIDPREFIX = getMac().replace(/:/gi, '')
 
-module.exports = function (RED) {
+module.exports = (RED) => {
   function log (level, message, method) {
     if (level >= logging) {
       RED.log[method || 'info'].apply(this, ['OpenZwave: ' + message])
@@ -106,6 +104,7 @@ module.exports = function (RED) {
         switch (event) {
           case 'node event':
           case 'node ready':
+          case 'node removed':
             status.text = util.format('node %j: %s', arghash.nodeid, event)
             break
           case 'value changed':
