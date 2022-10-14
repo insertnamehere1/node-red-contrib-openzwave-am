@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-openzwave-am",
-  "version": "1.5.10",
+  "version": "1.6.0",
   "description": "ZWave for node-red through OpenZWave, the open source ZWave library",
   "dependencies": {
     "getmac": "4.1.0",
@@ -8,12 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/appmodule/node-red-contrib-openzwave-am"
+    "url": "https://github.com/insertnamehere1/node-red-contrib-openzwave-am"
   },
   "author": "Elias Karakoulakis <elias.karakoulakis@gmail.com>",
   "contributors": [
     "dionmes",
-    "milos.jovac"
+    "milos.jovac",
+    "chris"
   ],
   "keywords": [
     "node-red",
@@ -26,7 +27,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/OpenZWave/node-red-contrib-openzwave-am.git#master/issues"
+    "url": "https://github.com/insertnamehere1/node-red-contrib-openzwave-am.git#master/issues"
   },
   "main": "10-zwave.js",
   "scripts": {
